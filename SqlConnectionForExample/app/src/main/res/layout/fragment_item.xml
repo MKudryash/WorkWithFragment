@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ItemFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/txtTitleMovieF"
+                android:gravity="center"
+                android:text="Жизнь"
+                android:textAlignment="center"
+                android:textSize="24dp" />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelGenreMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Жанр: "
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+            <EditText
+                android:id="@+id/txtGenreMovieF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Драма"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/labelGenreMovie"
+                app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Страна: "
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/labelGenreMovie"
+                tools:ignore="NotSibling" />
+
+            <EditText
+                android:id="@+id/txtCountryF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Россия"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/labelCountry"
+                app:layout_constraintTop_toBottomOf="@+id/txtGenreMovie" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelYearPremiere"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Год премьеры: "
+                android:textSize="19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelCountry" />
+
+            <EditText
+                android:id="@+id/txtYearPremiereF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2022"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/labelYearPremiere"
+                app:layout_constraintTop_toBottomOf="@+id/txtCountry" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
